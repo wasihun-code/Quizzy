@@ -2,9 +2,15 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import { CategoriesProvider } from './providers/CategoriesProvider.jsx'
+import { QuizzesProvider } from './providers/QuizzesProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <QuizzesProvider>
+      <CategoriesProvider>
+        <App />
+      </CategoriesProvider>
+    </QuizzesProvider>
   </StrictMode>,
 )

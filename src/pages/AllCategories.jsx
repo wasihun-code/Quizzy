@@ -1,11 +1,11 @@
-// pages/AllQuiz.js
+// pages/AllCategories.js
 import React, { useContext } from 'react';
 import { BiUserCircle } from 'react-icons/bi';
 
 import QuizzesContext from '../providers/QuizzesProvider';
 import { Link } from 'react-router-dom';
 
-const AllQuiz = () => {
+const AllCategories = () => {
   const [quizzes, loading] = useContext(QuizzesContext)
 
   console.log(quizzes);
@@ -40,7 +40,7 @@ const AllQuiz = () => {
               </div>
               
               <Link 
-                to={`/quizzes/${quiz.id}`} 
+                to={`/quizzes/quiz/${quiz.id}`} 
                 className='border-2 rounded-xl p-2 px-4 text-center w-max self-center mt-4 hover:bg-black hover:text-white'>
                   Details
               </Link>
@@ -52,4 +52,4 @@ const AllQuiz = () => {
   );
 };
 
-export default AllQuiz;
+export default AllCategories;

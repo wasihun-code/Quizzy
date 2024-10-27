@@ -2,6 +2,7 @@ import React from 'react'
 import logo from '../../assets/logo3.png'
 import { BsFacebook, BsGoogle } from 'react-icons/bs'
 import { MdCheckBox } from 'react-icons/md'
+import { Link } from 'react-router-dom'
 
 
 const SignUp = () => {
